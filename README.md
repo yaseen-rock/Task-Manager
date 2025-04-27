@@ -87,7 +87,10 @@ VITE_API_URL=https://your-backend-domain.com/api
 
 ### 🔥 Landing Page (Login / Register Sliding)
 
-> (Add your screenshot here)
+![Screenshot (199)](https://github.com/user-attachments/assets/1d251b20-a653-4feb-9231-530fcc4127b0)
+
+![Screenshot (201)](https://github.com/user-attachments/assets/c4152462-4053-49d3-8261-26c412bf8e75)
+
 
 ---
 
