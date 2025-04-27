@@ -121,7 +121,7 @@ VITE_API_URL=https://your-backend-domain.com/api
 
 ### 1. Clone the Repositories
 ```bash
-git clone https://https://github.com/yaseen-rock/Task-Manager
+git clone https://github.com/yaseen-rock/Task-Manager.git
 ```
 
 ---
