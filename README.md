@@ -1,7 +1,7 @@
 # 📋 Task Management App
 
 A full-stack **Task Management** application where users can **Register**, **Login**, and **Manage their Tasks** efficiently.  
-Built with **Separate Frontend and Backend**, and deployed to **Vercel** (Frontend) and your backend hosting (e.g., Vercel/Render).
+Built with **Separate Frontend and Backend**.
 
 ---
 
@@ -96,13 +96,24 @@ VITE_API_URL=https://your-backend-domain.com/api
 
 ### 📋 Dashboard (Add / Edit / Delete Tasks)
 
-> (Add your screenshot here)
+![Screenshot (202)](https://github.com/user-attachments/assets/52c60101-0dcd-4dbf-b7b5-a054f05e2f53)
+
+![Screenshot (203)](https://github.com/user-attachments/assets/6c6332fe-84e3-4547-830e-9d9932a20853)
+
+![Screenshot (204)](https://github.com/user-attachments/assets/bfc83989-645b-4969-ac4f-0961c0082495)
+
+![Screenshot (205)](https://github.com/user-attachments/assets/922e9577-fecb-4d71-b875-8af2b47be07f)
 
 ---
 
 ### 🌗 Light and Dark Theme Toggle
 
-> (Add your screenshot here)
+![Screenshot (207)](https://github.com/user-attachments/assets/3db7797d-5820-4639-bfc6-eef112304594)
+
+![Screenshot (208)](https://github.com/user-attachments/assets/8d227f42-9848-4e09-a299-3845232006c0)
+
+![Screenshot (209)](https://github.com/user-attachments/assets/eeb8596f-8eac-4e46-b6c5-a0c7e82eaa64)
+
 
 ---
 
@@ -110,8 +121,7 @@ VITE_API_URL=https://your-backend-domain.com/api
 
 ### 1. Clone the Repositories
 ```bash
-git clone https://github.com/yourusername/task-management-frontend.git
-git clone https://github.com/yourusername/task-management-backend.git
+git clone https://https://github.com/yaseen-rock/Task-Manager
 ```
 
 ---
@@ -150,18 +160,6 @@ npm run dev
 cd frontend
 npm run dev
 ```
-
----
-
-## 🌎 Deployment
-
-### 📦 Backend Deployment
-- Host backend on Render / Railway / Vercel / Any VPS.
-- Make sure your MongoDB URI is cloud-based (e.g., MongoDB Atlas).
-
-### 🌐 Frontend Deployment
-- Host frontend on **Vercel**.
-- Set the frontend `.env` on Vercel with the live backend URL.
 
 ---
 
