@@ -230,9 +230,9 @@ export default function Dashboard() {
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
             <Box display="flex" alignItems="center">
               <Avatar 
-                src="https://companieslogo.com/img/orig/ACN-cce5b411.png?t=1720244490" 
-                alt="Accenture" 
-                sx={{ width: '20px', height: '20px', marginRight: '11px'}}
+                src="https://www.stamurai.com/images/logo.svg" 
+                alt="Stamurai" 
+                sx={{ width: '80px', height: '20px', marginRight: '11px'}}
                 variant="square"
               />
               <Typography variant="h6" component="div" fontWeight="bold">
@@ -241,7 +241,7 @@ export default function Dashboard() {
             </Box>
             
             <Box display="flex" alignItems="center">
-              <IconButton onClick={toggleColorMode} color="inherit" sx={{ mr: 2 }}>
+              <IconButton onClick={toggleColorMode} color="inherit" sx={{ mr: 4 }}>
                 {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
               </IconButton>
               <Button 

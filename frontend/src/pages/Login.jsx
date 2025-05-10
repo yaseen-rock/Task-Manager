@@ -183,7 +183,7 @@ export default function AuthPage() {
           
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
   <img 
-    src="https://companieslogo.com/img/orig/ACN-cce5b411.png?t=1720244490" 
+    src="https://i.ibb.co/7t1wKJFP/stamurai-removebg-preview.png" 
     alt="Accenture Logo" 
     style={{ width: '20px', height: '20px', marginRight: '11px' }}
   />
