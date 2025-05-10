@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const ErrorResponse = require('../utils/ErrorResponse');
+const connectDB = require('../database/db'); // Add this import
 
 // @desc    Register user
 // @route   POST /api/auth/register
@@ -8,6 +9,9 @@ exports.register = async (req, res, next) => {
   const { name, email, password } = req.body;
 
   try {
+    // Ensure DB connection
+    await connectDB();
+
     // Create user
     const user = await User.create({
       name,
@@ -23,6 +27,10 @@ exports.register = async (req, res, next) => {
       token
     });
   } catch (err) {
+    // Handle duplicate key error (email)
+    if (err.code === 11000) {
+      return next(new ErrorResponse('Email already exists', 400));
+    }
     next(err);
   }
 };
@@ -38,25 +46,37 @@ exports.login = async (req, res, next) => {
     return next(new ErrorResponse('Please provide an email and password', 400));
   }
 
-  // Check for user
-  const user = await User.findOne({ email }).select('+password');
+  try {
+    // Ensure DB connection
+    await connectDB();
 
-  if (!user) {
-    return next(new ErrorResponse('Invalid credentials', 401));
+    // Check for user
+    const user = await User.findOne({ email }).select('+password');
+
+    if (!user) {
+      return next(new ErrorResponse('Invalid credentials', 401));
+    }
+
+    // Check if password matches
+    const isMatch = await user.matchPassword(password);
+
+    if (!isMatch) {
+      return next(new ErrorResponse('Invalid credentials', 401));
+    }
+
+    // Create token
+    const token = user.getSignedJwtToken();
+
+    res.status(200).json({
+      success: true,
+      token,
+      user: { // Optional: Return basic user info
+        id: user._id,
+        name: user.name,
+        email: user.email
+      }
+    });
+  } catch (err) {
+    next(err);
   }
-
-  // Check if password matches
-  const isMatch = await user.matchPassword(password);
-
-  if (!isMatch) {
-    return next(new ErrorResponse('Invalid credentials', 401));
-  }
-
-  // Create token
-  const token = user.getSignedJwtToken();
-
-  res.status(200).json({
-    success: true,
-    token
-  });
 };
